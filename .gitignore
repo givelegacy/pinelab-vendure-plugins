@@ -46,3 +46,4 @@ __admin-ui/
 .astro
 .swc
 !/packages/vendure-plugin-stripe-subscription/dist/
+!/packages/vendure-plugin-stripe-subscription/dist/vendure-plugin-stripe-subscription/src/api/generated
