@@ -45,3 +45,4 @@ __admin-ui/
 /packages/vendure-plugin-stock-monitoring/test/test-emails/
 .astro
 .swc
+!/packages/vendure-plugin-stripe-subscription/dist/

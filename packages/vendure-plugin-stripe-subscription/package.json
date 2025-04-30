@@ -19,7 +19,6 @@
   ],
   "scripts": {
     "build": "rimraf dist && yarn generate && tsc && copyfiles -u 1 'src/ui/**/*' dist/vendure-plugin-stripe-subscription/src/",
-    "postinstall": "npx rimraf dist && npx graphql-codegen && npx tsc && npx copyfiles -u 1 \"src/ui/**/*\" dist/vendure-plugin-stripe-subscription/src/",
     "test": "vitest run --bail 1",
     "start": "yarn ts-node test/dev-server.ts",
     "start:with-admin": "COMPILE_ADMIN=true yarn ts-node test/dev-server.ts",
