@@ -214,7 +214,9 @@ let StripeSubscriptionService = StripeSubscriptionService_1 = class StripeSubscr
             // Create PaymentIntent + off_session, because we have both one-time and recurring payments. Order total is only > 0 if there are one-time payments
             intent = await stripeClient.paymentIntents.create({
                 customer: stripeCustomer.id,
-                payment_method_types: stripePaymentMethods,
+                ...(stripePaymentMethods?.length
+                    ? { payment_method_types: stripePaymentMethods }
+                    : {}),
                 setup_future_usage: setupFutureUsage,
                 amount: order.totalWithTax,
                 currency: order.currencyCode,

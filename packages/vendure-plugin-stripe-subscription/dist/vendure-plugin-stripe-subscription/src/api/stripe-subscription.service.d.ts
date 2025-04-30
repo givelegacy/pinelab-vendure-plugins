@@ -339,9 +339,9 @@ export declare class StripeSubscriptionService {
      * Get a subscription directly from Stripe
      */
     getSubscription(ctx: RequestContext, subscriptionId: string): Promise<Stripe.Response<Stripe.Subscription>>;
-    createIntent(ctx: RequestContext, stripePaymentMethods: string[], setupFutureUsage?: Stripe.PaymentIntentCreateParams.SetupFutureUsage): Promise<StripeSubscriptionIntent>;
-    createIntentForDraftOrder(ctx: RequestContext, orderId: ID, stripePaymentMethods: string[], setupFutureUsage?: Stripe.PaymentIntentCreateParams.SetupFutureUsage): Promise<StripeSubscriptionIntent>;
-    createIntentByOrder(ctx: RequestContext, order: Order, stripePaymentMethods: string[], setupFutureUsage?: Stripe.PaymentIntentCreateParams.SetupFutureUsage): Promise<StripeSubscriptionIntent>;
+    createIntent(ctx: RequestContext, stripePaymentMethods?: string[], setupFutureUsage?: Stripe.PaymentIntentCreateParams.SetupFutureUsage): Promise<StripeSubscriptionIntent>;
+    createIntentForDraftOrder(ctx: RequestContext, orderId: ID, stripePaymentMethods?: string[], setupFutureUsage?: Stripe.PaymentIntentCreateParams.SetupFutureUsage): Promise<StripeSubscriptionIntent>;
+    createIntentByOrder(ctx: RequestContext, order: Order, stripePaymentMethods?: string[], setupFutureUsage?: Stripe.PaymentIntentCreateParams.SetupFutureUsage): Promise<StripeSubscriptionIntent>;
     /**
      * Handle failed subscription payments that come in after the initial payment intent
      */
